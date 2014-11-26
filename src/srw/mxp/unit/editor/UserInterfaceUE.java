@@ -1,7 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2014 Dashman
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package srw.mxp.unit.editor;
 
@@ -582,12 +593,13 @@ public class UserInterfaceUE extends javax.swing.JFrame {
                     .addComponent(labelUnitCost)
                     .addComponent(textfieldCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelUnitRewardCash)
-                    .addComponent(textfieldReward, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelUnitRewardPP)
-                        .addComponent(textfieldRewardPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(textfieldRewardPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelUnitRewardCash)
+                        .addComponent(textfieldReward, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelUnitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -925,6 +937,8 @@ public class UserInterfaceUE extends javax.swing.JFrame {
 
     private void textfieldRewardPPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textfieldRewardPPKeyTyped
         // TODO add your handling code here:
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9')
+            evt.consume();
     }//GEN-LAST:event_textfieldRewardPPKeyTyped
 
     
@@ -2023,9 +2037,9 @@ public class UserInterfaceUE extends javax.swing.JFrame {
                     int map_value = weapons[id].map_type;
                     
                     if (map_value == 40)
-                        map_value = 22;
+                        map_value = 21;
                     else if (map_value == 43)
-                        map_value = 23;
+                        map_value = 22;
                     
                     wp.setMapAssist(2 + map_value);
                 }

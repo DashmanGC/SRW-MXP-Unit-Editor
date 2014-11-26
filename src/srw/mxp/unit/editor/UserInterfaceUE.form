@@ -471,12 +471,14 @@
                       <Component id="textfieldCost" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="labelUnitRewardCash" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textfieldReward" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                           <Component id="labelUnitRewardPP" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textfieldRewardPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelUnitRewardCash" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textfieldReward" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
